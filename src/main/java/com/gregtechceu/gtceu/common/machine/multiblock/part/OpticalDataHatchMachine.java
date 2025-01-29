@@ -48,7 +48,8 @@ public class OpticalDataHatchMachine extends MultiblockPartMachine implements IO
 
         if (isTransmitter()) {
             IMultiController controller = getControllers().first();
-            if (!(controller instanceof IWorkableMultiController workable) || !workable.getRecipeLogic().isWorking()) return false;
+            if (!(controller instanceof IWorkableMultiController workable) || !workable.getRecipeLogic().isWorking())
+                return false;
 
             List<IDataAccessHatch> dataAccesses = new ArrayList<>();
             List<IDataAccessHatch> transmitters = new ArrayList<>();
